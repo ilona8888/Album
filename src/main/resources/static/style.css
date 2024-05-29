@@ -1,0 +1,9 @@
+.block-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block-img-img {
+    display: inline-block;
+    max-width: 100%;
+}

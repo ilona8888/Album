@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel ="stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Познаю Spring Boot</title>
+</head>
+<body>
+
+<header th:insert = "blocks/header :: header"></header>
+
+<div class="container mt-5 mb-7">
+    <h1>Добавление статьи</h1><br>
+    <form action="/blog/add" method="post" enctype="multipart/form-data">
+    <input type="text" name="title" placeholder="Введите название статьи" class="form-control"><br>
+    <input type="text" name="anons" placeholder="Введите анонс" class="form-control"><br>
+    <input type="file" name="filename"  class="form-control" accept=".jpg,.jpeg,.png,.gif,.svg"><br>
+    <textarea name="full_text" placeholder="Введите содержание статьи" class="form-control"></textarea><br>
+    <button type="submit" class="btn btn-success">Добавить статью</button>
+    </form>
+</div>
+
+<footer th:insert="blocks/footer :: footer"></footer>
+
+<!--<h1>Привет Spring</h1>
+<p th:text="'Я ' + ${name}" />-->
+</body>
+</html>
